@@ -1,0 +1,56 @@
+<style>
+.tool  span {
+    position: absolute;
+    box-shadow: -2px 2px 10px -1px #333; 
+  	margin-left: 20px;
+	opacity: 0;
+	transition: 1s;
+	pointer-events: none;
+	}
+.south  p{
+    position: absolute; 
+    box-shadow: -2px 2px 10px -1px #333; 
+  	margin-left: 20px;
+	opacity: 0;
+	transition: 1s;
+	pointer-events: none;
+	}
+	.tool:hover span {
+	z-index: 1;
+	 opacity: 1;
+	}
+	.south:hover p{margin-left: 715px; margin-top: -20px;
+	z-index: 1;
+	 opacity: 1;
+	}
+.tool:hover::after {content: attr(data-title);  position: absolute; margin-left: 20px; width: 400px; 
+    text-align: center; 
+   text-transform: uppercase;
+    color: black; font-weight: bold;
+	background: lightpink;
+    padding-top: 465px; padding-bottom: 15px;
+    box-shadow: 1px 10px 1px -1px rgba(0, 0, 0, 0.3);
+	border: 2px solid red; opacity: 1;
+	}
+	.south:hover::after {content: attr(data-title);  position: absolute; margin-left: 20px;  width: 570px; 
+    text-align: center; 
+   text-transform: uppercase;
+    color: black; font-weight: bold;
+	background: lightblue;
+    padding-top: 340px; padding-bottom: 15px;
+    box-shadow: 1px 10px 1px -1px rgba(0, 0, 0, 0.3);
+	border: 1px solid red; opacity: 1;
+	}
+	[data-title]:after {content: attr(data-title); opacity: 0; transition: 1s;  padding-top: 465px;
+	}
+	{"view-in-browser.customBrowser": "Mozilla Firefox"}
+	</style>
+<body>
+<a class="tool" href="#" data-title="Симпатичный котенок" >This is a small cat<span> 
+  <img src="https://i112.fastpic.ru/big/2020/0612/04/9a461419031057dfb1b94d76da7c3804.jpg" width="400"/> 
+	
+	</span></a>
+	<a class='south' href='#' data-title="Очень Симпатичный котенок"> <p><img src= "/home/misha/Изображения/Снимок экрана от 2018-11-03 17-48-10.png" width="570"/> </p> >Тут текст, при котором будет картинка</a>
+	{"view-in-browser.customBrowser": "Mozilla Firefox"}
+</style>
+</body>
